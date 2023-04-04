@@ -9,7 +9,7 @@ import Contatti from './components/Contatti';
 import Footer from './components/Footer';
 
 // App
-function App() {
+function App() { 
   return (
     <>
       {/* Cursore */}
