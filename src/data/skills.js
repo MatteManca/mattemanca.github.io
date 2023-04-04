@@ -4,7 +4,7 @@ export default [
       title: 'Front-end Development & Design',
       description: 
       'Attraverso le competenze di web-design & web-development acquisite con il tempo, sono riuscito ad ideare e realizzare questo sito, che racchiude la mia personalità e le mie competenze.',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'ReactJs', 'TailwindCSS', 'Figma'],
+      technologies: ['HTML', 'CSS', 'JavaScript', 'ReactJs', 'TailwindCSS', 'Motion-Framer', 'Figma'],
    },
    {
       grade: 2,
