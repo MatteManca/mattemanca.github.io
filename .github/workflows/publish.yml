@@ -1,34 +1,31 @@
 name: Generate a build and push to another branch
-
 on:
   push:
     branches:
       - main
-
 jobs:
-  build:
+  build-and-push:
     runs-on: ubuntu-latest
-    name: Build and Push
     steps:
-      - name: git-checkout
+      - name: Checkout main branch
         uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+        with:
+          ref: main
+      - name: Install Node.js
+        uses: actions/setup-node@v2.1.2
         with:
           node-version: '16.x'
-
-      - name: Install all dependencies
+      - name: Install dependencies
         run: npm install
-
-      - name: Build
-        run: npm run build # The build command of your project
-
-      - name: Push
-        uses: s0/git-publish-subdir-action@develop
-        env:
-          REPO: self
-          BRANCH: Build # The branch name where you want to push the assets
-          FOLDER: dist # The directory where your assets are generated
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
-          MESSAGE: "Build: ({sha}) {msg}" # The commit message
+      - name: Build app
+        run: npm run build
+      - name: Checkout build branch
+        uses: actions/checkout@v2
+        with:
+          ref: build
+      - name: Copy files to build branch
+        run: cp -R dist/* .
+      - name: Push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'Auto-generated build'
