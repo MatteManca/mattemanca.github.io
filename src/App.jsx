@@ -10,7 +10,6 @@ import Footer from './components/Footer';
 
 // App
 function App() {
-
   return (
     <>
       {/* Cursore */}
