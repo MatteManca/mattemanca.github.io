@@ -1,5 +1,5 @@
 {
-  "homepage": "http://mattemancadev.github.io",
+  "homepage": "http://mattemancadev.github.io/mattemancadev.github.io",
   "name": "personal-website",
   "private": true,
   "version": "0.0.0",
@@ -8,7 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "host": "vite --host"
+    "host": "vite --host",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "framer-motion": "^10.10.0",
