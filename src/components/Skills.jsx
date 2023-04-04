@@ -1,6 +1,6 @@
 import { useEffect } from 'react'; 
 import { useInView } from '../../node_modules/react-intersection-observer';
-import { inView, motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 import SkillItem from './SkillsItem';
 import skills from '../data/skills'
@@ -54,26 +54,26 @@ function Skills() {
   const [refHeading, inViewHeading] = useInView()
   
   useEffect(() => {
-    if (!inView && i == 0) { 
+    if (!inViewHeading && i == 0) { 
       controlHeading.start("hidden");
       i++;
-    } if (inView) {
+    } if (inViewHeading) {
       controlHeading.start("visible");
     }
-  }, [controlHeading, inView]);
+  }, [controlHeading, inViewHeading]);
 
   // Controllo inView SKILLS
   const controlSkill = useAnimation()
-  const [refSkill, inView] = useInView()
+  const [refSkill, inViewSkill] = useInView()
   
   useEffect(() => {
-    if (!inView && j == 0) { 
+    if (!inViewSkill && j == 0) { 
       controlSkill.start("hidden");
       j++;
-    } if (inView) {
+    } if (inViewSkill) {
       controlSkill.start("visible")
     }
-  }, [controlSkill, inView]);
+  }, [controlSkill, inViewSkill]);
   
   // Rendering
   return (
