@@ -85,7 +85,7 @@ function Intro() {
             <motion.p className='lg:w-11/12 md:w-4/5 xs:w-full lg:m-0 xs:m-auto lg:text-left xs:text-center sm:text-base xs:text-sm'
                         variants={infoTextAnim}>
               Sono appassionato di <span className='text-sky-600'>Videomaking</span>, <span className='text-sky-600'>Fotografia</span> e tutto ciò che riguarda l’<span className='text-sky-600'>ambito creativo</span>.
-              Mi piace andare oltre le mie stesse capacità per il raggiungimento di <span className='text-sky-600'>nuovi obiettivi</span>, migliorare le mie <span className='text-sky-600'>competenze</span> e apprenderne di nuove. 
+              Mi piace andare oltre le mie stesse capacità per il raggiungimento di <span className='text-sky-600'>nuovi obiettivi</span>, migliorare le mie <span className='text-sky-600'>competenze</span> e acquisirne di nuove. 
             </motion.p>
 
 
