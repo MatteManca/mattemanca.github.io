@@ -1,11 +1,6 @@
 import React from 'react';
 import MessageForm from './MessageForm';
 
-import ig from "../../assets/Contacts/instagram.png";
-import em from "../../assets/Contacts/position.png";
-import cv from "../../assets/Files/cv.pdf";
-
-
 function Contatti() {
   return (
     <div className='bg-zinc-900 h-fit text-slate-50'>
@@ -29,7 +24,7 @@ function Contatti() {
             <div className='my-10 w-full'>
               {/* Position */}   
               <div className='flex flex-row lg:justify-start xs:justify-center mb-1'>
-                <img src={em} className='w-8 invert mr-2 lg:inline-block xs:hidden'/>
+                <img src="../../public/assets/Contacts/position.png" className='w-8 invert mr-2 lg:inline-block xs:hidden'/>
                 <p className='my-auto sm:text-base xs:text-sm'>
                   <span className='text-sky-600 font-bold'>Palermo</span>, Italia
                 </p>
@@ -37,7 +32,7 @@ function Contatti() {
 
               {/* Instagram */}
               <div className='flex flex-row lg:justify-start xs:justify-center'>
-                <img src={ig} className='w-8 invert mr-2 lg:inline-block xs:hidden'/>
+                <img src="../../public/assets/Contacts/instagram.png" className='w-8 invert mr-2 lg:inline-block xs:hidden'/>
                 <p className='my-auto sm:text-base xs:text-sm'>
                   <a href="https://www.instagram.com/manca.matte/" target="_blank" className='underline lg:underline-offset-2 lg:text-base xs:text-sm'>
                     <span className='lg:hidden xs:inline'>@</span>manca.matte
@@ -48,7 +43,7 @@ function Contatti() {
 
             {/* Bottom section */}
             <div className='text-xs opacity-50 mt-20 lg:block xs:hidden '>
-              <a href={cv} download className='underline underline-offset-2'>Download CV</a>
+              <a href="../../public/assets/Files/cv.pdf" download className='underline underline-offset-2'>Download CV</a>
               <p className='mt-1'>&copy; {new Date().getFullYear()} - Matteo Manca </p>
             </div>
 

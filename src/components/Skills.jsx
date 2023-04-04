@@ -54,28 +54,26 @@ function Skills() {
   const [refHeading, inViewHeading] = useInView()
   
   useEffect(() => {
-    if (!inViewHeading && i == 0) { 
+    if (!inView && i == 0) { 
       controlHeading.start("hidden");
       i++;
-    } if (inViewHeading) {
+    } if (inView) {
       controlHeading.start("visible");
     }
-  }, [controlHeading, inViewHeading]);
+  }, [controlHeading, inView]);
 
   // Controllo inView SKILLS
   const controlSkill = useAnimation()
-  const [refSkill, inViewSkill] = useInView()
+  const [refSkill, inView] = useInView()
   
   useEffect(() => {
-    if (!inViewSkill && j == 0) { 
+    if (!inView && j == 0) { 
       controlSkill.start("hidden");
-      console.log('hid')
       j++;
-    } if (inViewSkill) {
+    } if (inView) {
       controlSkill.start("visible")
-      console.log('vis')
     }
-  }, [controlSkill, inViewSkill]);
+  }, [controlSkill, inView]);
   
   // Rendering
   return (

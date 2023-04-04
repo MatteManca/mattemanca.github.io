@@ -1,9 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import {introImg} from '../../assets/Intro_Photo.png';
-import {arrow} from '../../assets/down_arrow.svg'
-
 // Animations code
 const imgAnim = {
   // Intro image animation
@@ -57,7 +54,7 @@ function Intro() {
         {/* Section 1 - Image placing */}
         <div className='flex-1 flex justify-center place-content-center lg:h-full'>
           {/* Image */}
-          <motion.img src={introImg}
+          <motion.img src="../../public/assets/Intro_Photo.png" 
                       className='xl:w-2/4 lg:w-4/6 md:w-2/5 sm:w-2/4 xs:w-2/3 m-auto drop-shadow-xl'
                       
                       variants={imgAnim}
@@ -96,7 +93,7 @@ function Intro() {
             <motion.p className='g:w-11/12 sm:w-4/5 xs:w-full lg:mx-0 xs:mx-auto mt-10 lg:text-left xs:text-center sm:text-xs xs:text-[0.7rem] text-stone-500 cursor-pointer lg:hover:underline underline-offset-2' 
                       onClick={scroll}
                       variants={infoTextAnim}>
-              <img src={arrow} className='sm:w-7 xs:w-5 inline-block mr-2 opacity-50' />
+              <img src='../../public/assets/down_arrow.svg' className='sm:w-7 xs:w-5 inline-block mr-2 opacity-50' />
               Scorri la pagina per avere maggiori informazioni. 
             </motion.p>
             
