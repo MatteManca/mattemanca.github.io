@@ -1,31 +1,31 @@
 name: Generate a build and push to another branch
 on:
-  push:
-    branches:
-      - main
+push:
+branches:
+- main
 jobs:
-  build-and-push:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout main branch
-        uses: actions/checkout@v2
-        with:
-          ref: main
-      - name: Install Node.js
-        uses: actions/setup-node@v2.1.2
-        with:
-          node-version: '16.x'
-      - name: Install dependencies
-        run: npm install
-      - name: Build app
-        run: npm run build
-      - name: Checkout build branch
-        uses: actions/checkout@v2
-        with:
-          ref: build
-      - name: Copy files to build branch
-        run: cp -R dist/* .
-      - name: Push changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: 'Auto-generated build'
+build-and-push:
+runs-on: ubuntu-latest
+steps:
+- name: Checkout main branch
+uses: actions/checkout@v2
+with:
+ref: main
+- name: Install Node.js
+uses: actions/setup-node@v2.4.1
+with:
+node-version: '18.x'
+- name: Install dependencies
+run: npm install
+- name: Build app
+run: npm run build
+- name: Checkout build branch
+uses: actions/checkout@v2
+with:
+ref: build
+- name: Copy files to build branch
+run: cp -R dist/* .
+- name: Push changes
+uses: stefanzweifel/git-auto-commit-action@v4
+with:
+commit_message: 'Auto-generated build'
