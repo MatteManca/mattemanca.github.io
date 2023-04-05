@@ -76,7 +76,7 @@ function Intro() {
             </motion.h1>
 
             {/* Label */}
-            <motion.p className='mb-6 lg:text-left xs:text-center text-xs opacity-50'
+            <motion.p className='mb-6 lg:text-left xs:text-center text-xs text-stone-500'
                         variants={infoTextAnim}>
               IT Consultant @ Tri-Tech Solutions s.r.l.
             </motion.p> 
