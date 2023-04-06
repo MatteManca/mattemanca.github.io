@@ -5,4 +5,4 @@
 @tailwind utilities;
 
 *{box-sizing: border-box;}
-.height-scr {height: 100svh;}
+.height-scr {height: 100svh; max-height: 100vh;}
