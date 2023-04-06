@@ -76,7 +76,7 @@ function Intro() {
             </motion.h1>
 
             {/* Label */}
-            <motion.p className='mb-6 lg:text-left xs:text-center text-xs text-stone-500'
+            <motion.p className='mb-6 lg:text-left xs:text-center text-xs text-stone-500 dark:text-slate-50'
                         variants={infoTextAnim}>
               IT Consultant @ Tri-Tech Solutions s.r.l.
             </motion.p> 
@@ -90,10 +90,10 @@ function Intro() {
 
 
             {/* Scroll Down text */}
-            <motion.p className='g:w-11/12 sm:w-4/5 xs:w-full lg:mx-0 xs:mx-auto mt-10 lg:text-left xs:text-center sm:text-xs xs:text-[0.7rem] text-stone-500 cursor-pointer lg:hover:underline underline-offset-2' 
+            <motion.p className='g:w-11/12 sm:w-4/5 xs:w-full lg:mx-0 xs:mx-auto mt-10 lg:text-left xs:text-center sm:text-xs xs:text-[0.7rem] text-stone-500 dark:text-slate-50 cursor-pointer lg:hover:underline underline-offset-2' 
                       onClick={scroll}
                       variants={infoTextAnim}>
-              <img src='/assets/down_arrow.svg' className='sm:w-7 xs:w-5 inline-block mr-2 opacity-50' />
+              <img src='/assets/down_arrow.svg' className='sm:w-7 xs:w-5 inline-block mr-2 opacity-50 dark:invert dark:opacity-100' />
               Scorri la pagina per avere maggiori informazioni. 
             </motion.p>
             

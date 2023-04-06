@@ -9,7 +9,7 @@ function MessageForm() {
 
          {/* Name */}
          <input type="text" name='name' placeholder='Nome' required
-                className='bg-transparent border-x-0 border-t-0 w-full focus:ring-0 focus:border-sky-60 sm:text-base xs:text-sm'/>
+                className='bg-transparent border-x-0 border-t-0 w-full focus:ring-0 focus:border-sky-600 sm:text-base xs:text-sm'/>
 
          {/* Email */}
          <input type='email' name='email' placeholder='Email' required

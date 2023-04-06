@@ -21,7 +21,7 @@ function SkillsItem({ grade, title, description, technologies }) {
         {/* Technologies tags */}
         <div className='mt-4 md:text-left text-center md:block xs:flex xs:flex-wrap xs:justify-center md:scale-100 xs:scale-90'>
           {technologies.map(tech => (
-            <span className='mt-2 py-1 px-3 mr-2 bg-zinc-900 text-slate-50 rounded-md text-xs md:hover:opacity-80 transition-all ease-in-out duration-200' key={tech}>
+            <span className='mt-2 py-1 px-3 mr-2 bg-zinc-900 dark:bg-transparent dark:outline dark:outline-1 text-slate-50 rounded-md text-xs md:hover:opacity-80 transition-all ease-in-out duration-200' key={tech}>
                 {tech}
             </span>
           ))}

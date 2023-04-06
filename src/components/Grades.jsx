@@ -6,8 +6,8 @@ function Grades({ value }) {
    let grades = [];
 
    for(let i = 0; i < 5; i++) {
-      if(i < value) grades.push(<div className='w-3 h-3 md:bg-gray-800 xs:bg-sky-600 rounded-full my-1'/>);
-      else grades.push(<div className='w-3 h-3 md:bg-gray-300 xs:bg-sky-200 rounded-full my-1'/>);
+      if(i < value) grades.push(<div className='w-3 h-3 md:bg-gray-800 md:dark:bg-slate-50 xs:bg-sky-600 rounded-full my-1'/>);
+      else grades.push(<div className='w-3 h-3 md:bg-gray-300 md:dark:bg-zinc-600 xs:bg-sky-200 rounded-full my-1'/>);
    }
 
    // Actual component

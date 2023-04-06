@@ -15,21 +15,6 @@ const headingReveal = {
       x:{ type:'spring', velocity:0.5 } ,
       opacity:{ type:'tween', duration:0.6 },
     }
-  }
-}
-
-const skillReveal = {
-  // Heading reveal animation
-  hidden:{ opacity:0 },
-  visible:{ 
-    opacity:1,
-    transition:{
-      type:'tween',
-      duration:0.1,
-    
-      when:'beforeChildren',
-      staggerChildren:0.1
-    }
   },
 }
 
@@ -40,58 +25,33 @@ const skill = {
     transition:{
       x:{ type:'spring', velocity:0.5 } ,
       opacity:{ type:'tween', duration:0.6 },
+      delay:0.15
     }
-  }
+  },
 }
 
-let i = 0; // Temp check variable
-let j = 0; // Temp check variable
-
 // Component code
-function Skills() {
-  // Controllo inView HEADING
-  const controlHeading = useAnimation()
-  const [refHeading, inViewHeading] = useInView()
-  
-  useEffect(() => {
-    if (!inViewHeading && i == 0) { 
-      controlHeading.start("hidden");
-      i++;
-    } if (inViewHeading) {
-      controlHeading.start("visible");
-    }
-  }, [controlHeading, inViewHeading]);
-
-  // Controllo inView SKILLS
-  const controlSkill = useAnimation()
-  const [refSkill, inViewSkill] = useInView()
-  
-  useEffect(() => {
-    if (!inViewSkill && j == 0) { 
-      controlSkill.start("hidden");
-      j++;
-    } if (inViewSkill) {
-      controlSkill.start("visible")
-    }
-  }, [controlSkill, inViewSkill]);
-  
+function Skills() {  
   // Rendering
   return (
     <div className='grid place-content-center min-h-screen max-h-fit xl:w-1/2 md:w-4/5 xs:w-full mx-auto'>
       <div className='my-16'>
         {/* Heading */}
         <motion.h1  className='font-bold sm:text-4xl xs:text-3xl md:mb-5 md:text-left xs:text-center'
-                    ref={refHeading}
                     variants={headingReveal}
                     initial='hidden'
-                    animate={controlHeading}>
+                    whileInView='visible'
+                    viewport={{once:true}}>
           Skills
         </motion.h1>
         
-        <motion.div variants={skillReveal} initial='hidden' animate={controlSkill} ref={refSkill}>
           {/* Skills iteration */}
           {skills.map(item => (
-            <motion.div variants={skill} key={item.description} >
+            <motion.div variants={skill} 
+                        initial='hidden'
+                        whileInView='visible'
+                        viewport={{once:true}}
+                        key={item.description} >
               <SkillItem
                 grade={item.grade}
                 title={item.title}
@@ -102,7 +62,6 @@ function Skills() {
               />
             </motion.div>
           ))}
-        </motion.div> 
       </div>
     </div>
   )
