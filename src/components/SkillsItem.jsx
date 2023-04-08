@@ -19,11 +19,11 @@ function SkillsItem({ grade, title, description, technologies }) {
         <p className='md:text-left xs:text-center sm:text-base xs:text-sm'>{description}</p>
 
         {/* Technologies tags */}
-        <div className='mt-4 md:text-left text-center md:block xs:flex xs:flex-wrap xs:justify-center md:scale-100 xs:scale-90'>
+        <div className='mt-4 md:mx-0 xs:mx-auto w-fit-content flex flex-wrap md:justify-start xs:justify-center md:scale-100 xs:scale-90'>
           {technologies.map(tech => (
-            <span className='mt-2 py-1 px-3 mr-2 bg-zinc-900 dark:bg-transparent dark:outline dark:outline-1 text-slate-50 rounded-md text-xs md:hover:opacity-80 transition-all ease-in-out duration-200' key={tech}>
+            <div className='mt-2 py-1 px-3 mr-2 bg-zinc-900 dark:bg-transparent dark:outline dark:outline-1 text-slate-50 rounded-md text-xs md:hover:opacity-80 transition-all ease-in-out duration-200' key={tech}>
                 {tech}
-            </span>
+            </div>
           ))}
         </div>
 
