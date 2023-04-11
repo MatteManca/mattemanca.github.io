@@ -17,7 +17,7 @@ function App() {
   // Rendering
     return (
       <>
-        <Loader/>
+        {/*FIX MOBILE <Loader/>*/}
 
         {/* Background color */}
         <div className='bg-slate-50 dark:bg-zinc-900 text-zinc-900 dark:text-slate-50 select-none overflow-hidden scroll-smooth overscroll-contain'>
