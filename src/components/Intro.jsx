@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { scroll } from "../App";
 
 // Animations code
 const imgAnim = {
@@ -59,15 +60,19 @@ function Intro() {
                       
                       variants={imgAnim}
                       initial='hidden' 
-                      animate='visible'
+                      whileInView='visible'
+                      viewport={{once:true}}
                       whileHover='hovering'
           />
         </div>
 
         {/* Section 2 - Description */}
         <div className='flex-1 grid place-content-center lg:my-auto'> 
-          <motion.div variants={infoBoxAnim} 
-                      initial='hidden' animate='visible'
+          <motion.div variants={infoBoxAnim}
+                      initial='hidden'                         
+                      whileInView='visible'
+                      viewport={{once:true}}
+
           >            
             {/* Heading */}
             <motion.h1  className='font-bold sm:text-4xl xs:text-3xl mb-2 lg:text-left xs:text-center'
@@ -110,12 +115,3 @@ function Intro() {
 export default Intro;
 
 
-// ALTRE FUNZIONI -------------------------
-// Funzione di scroll
-function scroll() {
-  window.scrollTo({
-    top: window.innerHeight,
-    left: 0,
-    behavior : "smooth"
-  })
-}

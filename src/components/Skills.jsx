@@ -1,5 +1,3 @@
-import { useEffect } from 'react'; 
-import { useInView } from '../../node_modules/react-intersection-observer';
 import { motion, useAnimation } from "framer-motion";
 
 import SkillItem from './SkillsItem';
