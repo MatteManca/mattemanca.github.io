@@ -5,7 +5,7 @@ import $ from 'jquery';
 // Import file componenti
 // import FixedItems from './components/FixedItems';
 // import Switch from './components/Switch.jsx'
-import Loader from './components/Loader';
+// import Loader from './components/Loader';
 import Intro from './components/Intro';
 import Skills from './components/Skills';
 import Contatti from './components/Contatti';
